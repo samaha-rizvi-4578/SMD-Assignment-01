@@ -29,7 +29,24 @@ class SettingsPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  
+                  // Top Row - WiFi & Battery Icons (Simulating System UI)
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      
+                     Text(
+                        "10:00", // Simulated Time Display
+                        style: TextStyle(fontSize: 18, color: Colors.black),
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.wifi, color: Colors.black, size: 22),
+                          SizedBox(width: 8),
+                          Icon(Icons.battery_full, color: Colors.black, size: 22),
+                        ],
+                      ),
+                    ],
+                    )
                 ],
               )
               )
