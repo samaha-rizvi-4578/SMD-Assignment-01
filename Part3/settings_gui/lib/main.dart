@@ -96,3 +96,19 @@ class SettingsPage extends StatelessWidget {
       contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
     );
   }
+
+   Widget _buildGroupedTiles(List<Widget> tiles) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        children: List.generate(
+          tiles.length * 2 - 1,
+          (index) => index.isEven ? tiles[index ~/ 2] : Divider(height: 1, thickness: 1, color: Colors.grey[300]),
+        ),
+      ),
+    );
+  }
+}
