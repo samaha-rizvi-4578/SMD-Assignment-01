@@ -70,14 +70,29 @@ class SettingsPage extends StatelessWidget {
               )
               )
             ),
-          title: Text('Settings Page'),
         ),
       ),
-      body: Center(
-        child: Text('Settings Page'),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        child: ListView(
+          children: [
+            
+          ],
+        ),
           
         ),
       
     );
   }
 }
+
+ Widget _buildTile(IconData icon, String title, String subtitle, Color iconColor) {
+    return ListTile(
+      leading: Icon(icon, color: iconColor),
+      title: Text(title, style: TextStyle(fontWeight: FontWeight.bold)),
+      subtitle: Text(subtitle),
+      tileColor: Colors.white,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+    );
+  }
