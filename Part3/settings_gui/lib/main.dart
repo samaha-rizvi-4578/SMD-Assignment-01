@@ -17,8 +17,25 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Settings Page'),
+      backgroundColor: Colors.grey[200],
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(300),
+        child: AppBar(
+          backgroundColor: Colors.grey[200],
+          elevation: 0,
+          flexibleSpace: SafeArea(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  
+                ],
+              )
+              )
+            ),
+          title: Text('Settings Page'),
+        ),
       ),
       body: Center(
         child: Text('Settings Page'),
