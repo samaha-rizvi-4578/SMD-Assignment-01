@@ -76,7 +76,30 @@ class SettingsPage extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 16),
         child: ListView(
           children: [
-            
+             _buildTile(Icons.wifi, 'Connections', 'Wi-Fi, Bluetooth, Data usage', Colors.blue),
+            SizedBox(height: 15),
+            _buildGroupedTiles([
+              _buildTile(Icons.volume_up, 'Sounds', 'Ringtone, Volume', Colors.purple),
+              _buildTile(Icons.notifications, 'Notifications', 'App alerts, Do not disturb', Colors.orange),
+            ]),
+            SizedBox(height: 15),
+            _buildGroupedTiles([
+              _buildTile(Icons.display_settings, 'Display', 'Brightness, Blue light filter, Home screen', Colors.green),
+              _buildTile(Icons.wallpaper, 'Wallpaper', 'Home screen wallpaper, Lock screen wallpaper', Colors.pink),
+              _buildTile(Icons.palette, 'Themes', 'Themes, Wallpapers, Icons', Colors.deepPurple),
+              _buildTile(Icons.lock, 'Lock screen', 'Screen lock, Always On Display, Clock style', Colors.blue),
+            ]),
+            SizedBox(height: 15),
+            _buildGroupedTiles([
+              _buildTile(Icons.security, 'Biometrics and security', 'Face recognition, Find My Mobile', Colors.indigo),
+              _buildTile(Icons.privacy_tip, 'Privacy', 'Permission manager', Colors.blueGrey),
+              _buildTile(Icons.location_on, 'Location', 'Location settings, Location requests', Colors.green),
+              _buildTile(Icons.backup, 'Accounts and backup', 'Samsung Cloud, Smart Switch', Colors.blueAccent),
+              _buildTile(Icons.settings, 'Google', 'Google settings', Colors.blue),
+            ]),
+            SizedBox(height: 15),
+            _buildTile(Icons.settings_suggest, 'Advanced features', 'Motions and gestures, One-handed mode', Colors.orange),
+            _buildTile(Icons.favorite, 'Digital Wellbeing and parental controls', 'Screen time, App timers, Wind Down', Colors.green),
           ],
         ),
           
@@ -111,4 +134,3 @@ class SettingsPage extends StatelessWidget {
       ),
     );
   }
-}
