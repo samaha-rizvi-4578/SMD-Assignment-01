@@ -46,7 +46,26 @@ class SettingsPage extends StatelessWidget {
                         ],
                       ),
                     ],
-                    )
+                    ),
+                  SizedBox(height: 10),
+                   // "Settings" Title with Expanded Spacer
+                   Expanded(
+                    child: Row(
+                      children: [
+                        Text(
+                          "Settings",
+                          style: TextStyle(fontSize: 32, color: Colors.black, fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(),// Pushes icons to the right
+                        Icon(Icons.search, color: Colors.black, size: 28),
+                        SizedBox(width: 16),
+                        CircleAvatar(
+                          radius: 20,
+                          backgroundImage: AssetImage('assets/profile.jpg'),
+                        ),
+                      ],
+                    ),
+                   ),
                 ],
               )
               )
