@@ -18,12 +18,36 @@ class PlayStoreApp extends StatelessWidget {
 
 class HomeScreen extends StatelessWidget {
   final List<Map<String, String>> games = [
-    {'title': 'Join Clash 3D', 'details': 'Arcade • 4.0 ★ • 61 MB', 'icon': 'assets/join_clash.png'},
-    {'title': 'Yalla Ludo', 'details': 'Board • 4.3 ★ • 104 MB', 'icon': 'assets/yalla_ludo.png'},
-    {'title': 'PUBG MOBILE - DREAM TEAM', 'details': 'Action • 4.2 ★ • 626 MB', 'icon': 'assets/pubg.png'},
-    {'title': '8 Ball Pool', 'details': 'Sports • Installed', 'icon': 'assets/8ball.png'},
-    {'title': 'Subway Surfers', 'details': 'Arcade • 4.4 ★ • 137 MB', 'icon': 'assets/subway.png'},
-    {'title': 'Water Color Sort', 'details': 'Puzzle • 4.1 ★ • 13 MB', 'icon': 'assets/water_sort.png'},
+    {
+      'title': 'Join Clash 3D',
+      'details': 'Arcade • 4.0 ★ • 61 MB',
+      'icon': 'assets/join_clash.png'
+    },
+    {
+      'title': 'Yalla Ludo',
+      'details': 'Board • 4.3 ★ • 104 MB',
+      'icon': 'assets/yalla_ludo.png'
+    },
+    {
+      'title': 'PUBG MOBILE - DREAM TEAM',
+      'details': 'Action • 4.2 ★ • 626 MB',
+      'icon': 'assets/pubg.png'
+    },
+    {
+      'title': '8 Ball Pool',
+      'details': 'Sports • Installed',
+      'icon': 'assets/8ball.png'
+    },
+    {
+      'title': 'Subway Surfers',
+      'details': 'Arcade • 4.4 ★ • 137 MB',
+      'icon': 'assets/subway.png'
+    },
+    {
+      'title': 'Water Color Sort',
+      'details': 'Puzzle • 4.1 ★ • 13 MB',
+      'icon': 'assets/water_sort.png'
+    },
   ];
 
   @override
@@ -83,21 +107,25 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image.asset(games[index]['icon']!, width: 50, height: 50),
+                          child: Image.asset(games[index]['icon']!,
+                              width: 50, height: 50),
                         ),
                         SizedBox(width: 10),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(games[index]['title']!, style: TextStyle(fontWeight: FontWeight.bold)),
+                              Text(games[index]['title']!,
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.bold)),
                               Text(games[index]['details']!),
                             ],
                           ),
                         ),
                       ],
                     ),
-                    trailing: Icon(Icons.arrow_forward_ios, size: 16, color: Colors.grey),
+                    trailing: Icon(Icons.arrow_forward_ios,
+                        size: 16, color: Colors.grey),
                   );
                 },
               ),
@@ -130,16 +158,37 @@ class TabBarSection extends StatelessWidget {
             label: Text('Top free'),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             onSelected: (value) {},
+            selectedColor: Colors.lightGreen[100],
+            selected: true,
+            showCheckmark: false,
+            labelStyle: TextStyle(
+              color: const Color.fromARGB(255, 12, 110, 15),
+              fontWeight: FontWeight.bold,
+            ),
           ),
           FilterChip(
             label: Text('Categories'),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             onSelected: (value) {},
+            selectedColor: Colors.lightGreen[100],
+            selected: false,
+            showCheckmark: false,
+            labelStyle: TextStyle(
+              color: const Color.fromARGB(255, 84, 84, 84),
+              fontWeight: FontWeight.bold,
+            ),
           ),
           FilterChip(
             label: Text('New'),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             onSelected: (value) {},
+            selectedColor: Colors.lightGreen[100],
+            selected: false,
+            showCheckmark: false,
+            labelStyle: TextStyle(
+              color: const Color.fromARGB(255, 84, 84, 84),
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ],
       ),
