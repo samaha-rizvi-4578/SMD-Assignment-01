@@ -1,7 +1,7 @@
-screen shots
+## screen shots
 ![alt text](image.png)
-image liked
+### image liked
 ![alt text](image-1.png)
-list of favourites
+### list of favourites
 ![alt text](image-2.png)
 ![alt text](image-3.png)
